@@ -2,7 +2,7 @@
 	<head>
 		<link rel="stylesheet" href="../compiled/flipclock.css">
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 		<script src="../compiled/flipclock.js"></script>		
 	</head>
@@ -10,8 +10,7 @@
 	<div class="clock" style="margin:2em;"></div>
 	<div class="message"></div>
 
-	<button class="start">Start Clock</button>
-
+	<button class="start">Start Clock</button>	
 	<script type="text/javascript">
 		var clock;
 		
@@ -31,6 +30,35 @@
 		    $('.start').click(function(e) {
 
 		    	clock.start();
+		    });
+
+		});
+	</script>
+	<div class="clock1" style="margin:2em;"></div>
+	<div class="message1"></div>
+
+	<button class="start1">Start Clock</button>
+
+	
+	<script type="text/javascript">
+		var clock1;
+		
+		$(document).ready(function() {
+			
+			clock1 = $('.clock1').FlipClock(20, {
+		        clockFace: 'MinuteCounter',
+		        countdown: true,
+		        autoStart: false,
+		        callbacks: {
+		        	start: function() {
+		        		$('.message1').html('The other clock has started!');
+		        	}
+		        }
+		    });
+
+		    $('.start1').click(function(e) {
+
+		    	clock1.start();
 		    });
 
 		});

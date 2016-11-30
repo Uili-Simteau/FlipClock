@@ -2,7 +2,7 @@
 	<head>
 		<link rel="stylesheet" href="../compiled/flipclock.css">
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 		<script src="../compiled/flipclock.js"></script>		
 	</head>
@@ -27,12 +27,16 @@
 				setTimeout(function() {
 					clock.loadClockFace('HourlyCounter');
 				}, 7000);
+				
+				setTimeout(function() {
+					clock.loadClockFace('HourlyCounter');
+				}, 10000);
 
 				setTimeout(function() {
 					clock.loadClockFace('Counter', {
 						autoStart: true
 					});
-				}, 10000);
+				}, 12000);
 			});
 		</script>
 		
